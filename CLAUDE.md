@@ -11,6 +11,7 @@
 - **フレームワーク**: Angular 21
 - **アニメーション**: motion.js (旧Framer Motion)
 - **スタイリング**: Tailwind CSS 4
+- **アイコン**: lucide-angular
 - **テスト**: Vitest
 - **言語**: TypeScript 5.9
 
@@ -61,6 +62,22 @@ afterNextRender(() => {
 
 デモページでソースコードを表示する際は、コード重複を避けるためGitHub Raw URLから動的に取得する。
 ハードコードされたソースコードをバンドルに含めない設計。
+
+### アイコン
+
+lucide-angularを使用。インラインSVGは使わず、`<lucide-icon>`コンポーネントを使用する：
+
+```typescript
+import { LucideAngularModule, Heart } from 'lucide-angular';
+
+@Component({
+  imports: [LucideAngularModule],
+  template: `<lucide-icon [img]="HeartIcon" class="w-6 h-6" />`
+})
+export class MyComponent {
+  protected readonly HeartIcon = Heart;
+}
+```
 
 ### Prettier設定
 
