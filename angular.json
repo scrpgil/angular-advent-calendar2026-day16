@@ -30,6 +30,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/advent-calendar-day-16/",
               "budgets": [
                 {
                   "type": "initial",
