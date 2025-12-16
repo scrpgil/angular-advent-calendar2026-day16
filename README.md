@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+  比較
+
+  | アプローチ         | メリット                                 | デメリット                         |
+  |--------------------|------------------------------------------|------------------------------------|
+  | TS側で直接記述     | シンプル、学習コスト低                   | 再利用性が低い、コードが冗長になる |
+  | コンポーネント作成 | カプセル化できる                         | アニメーション対象が限定される     |
+  | ディレクティブ作成 | 任意の要素に適用可能、宣言的、再利用性高 | 初期実装コストがやや高い           |

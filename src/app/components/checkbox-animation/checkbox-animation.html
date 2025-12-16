@@ -1,0 +1,48 @@
+<div class="w-full max-w-sm p-6 bg-white rounded-2xl shadow-lg">
+  <h3 class="mb-4 text-gray-900 font-semibold">今日のタスク</h3>
+
+  <div class="space-y-3">
+    @for (task of tasks(); track task.id; let i = $index) {
+      <div
+        class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+        (click)="toggleTask(task.id, i)"
+      >
+        <div
+          #checkbox
+          class="relative w-6 h-6 rounded-md border-2 flex items-center justify-center transition-colors"
+          [class]="getCheckboxClass(task.completed)"
+        >
+          @if (task.completed) {
+            <!-- Check Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          }
+        </div>
+
+        <span
+          class="flex-1 relative"
+          [class]="getTextClass(task.completed)"
+        >
+          <span class="relative inline-block">
+            {{ task.text }}
+            <span
+              #strikethrough
+              class="absolute inset-x-0 top-1/2 h-0.5 bg-gray-400"
+              [style.width]="task.completed ? '100%' : '0%'"
+            ></span>
+          </span>
+        </span>
+      </div>
+    }
+  </div>
+</div>

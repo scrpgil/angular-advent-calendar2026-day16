@@ -1,0 +1,12 @@
+<div class="p-8 bg-white rounded-2xl shadow-lg">
+  <h2 class="mb-6 text-gray-900 text-center font-semibold">トグルスイッチ バリエーション</h2>
+
+  <div class="grid grid-cols-3 gap-8">
+    <app-minimal-toggle (toggled)="onToggle('minimal', $event)" />
+    <app-icon-toggle (toggled)="onToggle('icon', $event)" />
+    <app-material-toggle (toggled)="onToggle('material', $event)" />
+    <app-square-toggle (toggled)="onToggle('square', $event)" />
+    <app-glow-toggle (toggled)="onToggle('glow', $event)" />
+    <app-slide-toggle (toggled)="onToggle('slide', $event)" />
+  </div>
+</div>
