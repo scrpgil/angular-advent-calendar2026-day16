@@ -285,28 +285,26 @@
       </app-code-tabs>
     </div>
 
-    <!-- フォーム要素 -->
+    <!-- スターレーティング -->
     <div class="mb-10">
-      <p class="text-gray-700 leading-relaxed mb-6">
-        フォーム要素にもマイクロインタラクションを取り入れることで、ユーザー体験を向上させることができます。
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">スターレーティング</h3>
+      <p class="text-gray-600 mb-4">
+        星をホバー・クリックした際にスケールアニメーションで評価を視覚的にフィードバックします。
       </p>
-      <div class="grid grid-cols-1 gap-8">
-        <!-- スターレーティング -->
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">スターレーティング</h3>
-          <app-code-tabs componentName="star-rating">
-            <app-star-rating (ratingChange)="onRatingChange($event)" />
-          </app-code-tabs>
-        </div>
+      <app-code-tabs componentName="star-rating">
+        <app-star-rating (ratingChange)="onRatingChange($event)" />
+      </app-code-tabs>
+    </div>
 
-        <!-- チップインプット -->
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">チップインプット</h3>
-          <app-code-tabs componentName="chip-input">
-            <app-chip-input (chipsChange)="onChipsChange($event)" (chipAdded)="onChipAdded($event)" (chipRemoved)="onChipRemoved($event)" />
-          </app-code-tabs>
-        </div>
-      </div>
+    <!-- チップインプット -->
+    <div class="mb-10">
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">チップインプット</h3>
+      <p class="text-gray-600 mb-4">
+        タグの追加・削除をアニメーションで表現し、操作結果を明確に伝えます。
+      </p>
+      <app-code-tabs componentName="chip-input">
+        <app-chip-input (chipsChange)="onChipsChange($event)" (chipAdded)="onChipAdded($event)" (chipRemoved)="onChipRemoved($event)" />
+      </app-code-tabs>
     </div>
   </section>
 
