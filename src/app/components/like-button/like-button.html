@@ -4,8 +4,12 @@
     class="relative p-4 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors overflow-visible"
     (click)="handleLike()"
   >
-    <div #heartIcon [class]="heartClass()">
-      <lucide-icon [img]="HeartIcon" class="w-8 h-8" />
+    <div #heartIcon>
+      <lucide-icon
+        [img]="HeartIcon"
+        class="w-8 h-8 transition-colors"
+        [class]="isLiked() ? 'fill-red-500 text-red-500' : 'text-gray-400'"
+      />
     </div>
   </button>
 

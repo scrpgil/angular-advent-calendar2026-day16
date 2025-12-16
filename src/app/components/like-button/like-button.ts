@@ -1,7 +1,6 @@
 import {
   Component,
   signal,
-  computed,
   afterNextRender,
   ElementRef,
   viewChild,
@@ -29,12 +28,6 @@ export class LikeButton {
 
   protected readonly isLiked = signal(false);
   protected readonly count = signal(42);
-
-  protected readonly heartClass = computed(() =>
-    this.isLiked()
-      ? 'transition-colors fill-red-500 text-red-500'
-      : 'transition-colors text-gray-400'
-  );
 
   private readonly button = viewChild<ElementRef<HTMLButtonElement>>('button');
   private readonly heartIcon = viewChild<ElementRef<HTMLElement>>('heartIcon');
