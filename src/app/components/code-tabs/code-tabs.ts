@@ -1,7 +1,7 @@
 import { Component, input, signal, effect } from '@angular/core';
 
-const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/scrpgil/angular-advent-calendar2026-day16/main/src/app/components';
-const GITHUB_BASE = 'https://github.com/scrpgil/angular-advent-calendar2026-day16/blob/main/src/app/components';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/scrpgil/angular-advent-calendar2025-day16/main/src/app/components';
+const GITHUB_BASE = 'https://github.com/scrpgil/angular-advent-calendar2025-day16/blob/main/src/app/components';
 
 @Component({
   selector: 'app-code-tabs',

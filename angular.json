@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-advent-calendar2026-day16": {
+    "angular-advent-calendar2025-day16": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -30,7 +30,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/angular-advent-calendar2026-day16/",
+              "baseHref": "/angular-advent-calendar2025-day16/",
               "budgets": [
                 {
                   "type": "initial",
@@ -57,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-advent-calendar2026-day16:build:production"
+              "buildTarget": "angular-advent-calendar2025-day16:build:production"
             },
             "development": {
-              "buildTarget": "angular-advent-calendar2026-day16:build:development"
+              "buildTarget": "angular-advent-calendar2025-day16:build:development"
             }
           },
           "defaultConfiguration": "development"
