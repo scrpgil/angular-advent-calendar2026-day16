@@ -40,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist/advent-calendar-day-16/browser'
+          path: './dist/angular-advent-calendar2026-day16/browser'
 
   deploy:
     environment:
