@@ -213,9 +213,9 @@ animate(element, &#123; x: 100 &#125;, &#123; type: 'spring', stiffness: 300 &#1
       <p class="text-gray-600 mb-4">
         ハートアイコンをクリックすると、拡大アニメーションとリップルエフェクトが発生します。
       </p>
-      <div class="bg-white border border-gray-200 rounded-xl p-8 flex justify-center">
+      <app-code-tabs [tsCode]="sourceCodes.likeButton.ts" [htmlCode]="sourceCodes.likeButton.html" [githubUrl]="sourceCodes.likeButton.github">
         <app-like-button (likedChange)="onLikeChange($event)" />
-      </div>
+      </app-code-tabs>
     </div>
 
     <!-- トグルボタン -->
@@ -224,9 +224,9 @@ animate(element, &#123; x: 100 &#125;, &#123; type: 'spring', stiffness: 300 &#1
       <p class="text-gray-600 mb-4">
         ON/OFFの切り替えをスムーズなスライドアニメーションで表現します。
       </p>
-      <div class="bg-white border border-gray-200 rounded-xl p-8 flex justify-center">
+      <app-code-tabs [tsCode]="sourceCodes.animatedToggle.ts" [htmlCode]="sourceCodes.animatedToggle.html" [githubUrl]="sourceCodes.animatedToggle.github">
         <app-animated-toggle (toggled)="onToggleChange($event)" />
-      </div>
+      </app-code-tabs>
     </div>
 
     <!-- バリエーション -->
@@ -247,27 +247,27 @@ animate(element, &#123; x: 100 &#125;, &#123; type: 'spring', stiffness: 300 &#1
     <div class="mb-10">
       <h3 class="text-xl font-semibold text-gray-800 mb-3">通知ボタン</h3>
       <p class="text-gray-600 mb-4">通知の有無をバッジとアニメーションで直感的に伝えます。</p>
-      <div class="bg-white border border-gray-200 rounded-xl p-8 flex justify-center">
+      <app-code-tabs [tsCode]="sourceCodes.pulseButton.ts" [htmlCode]="sourceCodes.pulseButton.html" [githubUrl]="sourceCodes.pulseButton.github">
         <app-pulse-button (clicked)="onPulseClick()" />
-      </div>
+      </app-code-tabs>
     </div>
 
     <!-- カウンター -->
     <div class="mb-10">
       <h3 class="text-xl font-semibold text-gray-800 mb-3">カウンター</h3>
       <p class="text-gray-600 mb-4">数値の増減をアニメーションで滑らかに表現します。</p>
-      <div class="bg-white border border-gray-200 rounded-xl p-8 flex justify-center">
+      <app-code-tabs [tsCode]="sourceCodes.counterCard.ts" [htmlCode]="sourceCodes.counterCard.html" [githubUrl]="sourceCodes.counterCard.github">
         <app-counter-card (valueChange)="onCounterChange($event)" />
-      </div>
+      </app-code-tabs>
     </div>
 
     <!-- ローディング -->
     <div class="mb-10">
       <h3 class="text-xl font-semibold text-gray-800 mb-3">ローディング</h3>
       <p class="text-gray-600 mb-4">待機状態をユーザーに伝えるローディングインジケーターです。</p>
-      <div class="bg-white border border-gray-200 rounded-xl p-8 flex justify-center">
+      <app-code-tabs [tsCode]="sourceCodes.loadingSpinner.ts" [htmlCode]="sourceCodes.loadingSpinner.html" [githubUrl]="sourceCodes.loadingSpinner.github">
         <app-loading-spinner />
-      </div>
+      </app-code-tabs>
     </div>
 
     <!-- ファイルアップロード -->
@@ -276,18 +276,18 @@ animate(element, &#123; x: 100 &#125;, &#123; type: 'spring', stiffness: 300 &#1
       <p class="text-gray-600 mb-4">
         ドラッグ&ドロップとプログレス表示を組み合わせたアップロードUIです。
       </p>
-      <div class="bg-white border border-gray-200 rounded-xl p-8 flex justify-center">
+      <app-code-tabs [tsCode]="sourceCodes.progressCard.ts" [htmlCode]="sourceCodes.progressCard.html" [githubUrl]="sourceCodes.progressCard.github">
         <app-progress-card (progressChange)="onProgressChange($event)" (completed)="onProgressComplete()" />
-      </div>
+      </app-code-tabs>
     </div>
 
     <!-- チェックボタン -->
     <div class="mb-10">
       <h3 class="text-xl font-semibold text-gray-800 mb-3">チェックボタン</h3>
       <p class="text-gray-600 mb-4">チェックマークの描画アニメーションで完了感を演出します。</p>
-      <div class="bg-white border border-gray-200 rounded-xl p-8 flex justify-center">
+      <app-code-tabs [tsCode]="sourceCodes.checkboxAnimation.ts" [htmlCode]="sourceCodes.checkboxAnimation.html" [githubUrl]="sourceCodes.checkboxAnimation.github">
         <app-checkbox-animation (tasksChange)="onTasksChange($event)" (taskToggled)="onTaskToggled($event)" />
-      </div>
+      </app-code-tabs>
     </div>
 
     <!-- ホバーカード -->
@@ -296,23 +296,29 @@ animate(element, &#123; x: 100 &#125;, &#123; type: 'spring', stiffness: 300 &#1
       <p class="text-gray-600 mb-4">
         ホバー時にカードが浮き上がるインタラクションを実装しています。
       </p>
-      <div class="bg-white border border-gray-200 rounded-xl p-8 flex justify-center">
+      <app-code-tabs [tsCode]="sourceCodes.hoverCard.ts" [htmlCode]="sourceCodes.hoverCard.html" [githubUrl]="sourceCodes.hoverCard.github">
         <app-hover-card (buttonClick)="onHoverCardClick()" />
-      </div>
+      </app-code-tabs>
     </div>
 
     <!-- フォーム要素 -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">フォーム要素</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 gap-8">
         <!-- スターレーティング -->
-        <div class="flex items-center justify-center">
-          <app-star-rating (ratingChange)="onRatingChange($event)" />
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">スターレーティング</h3>
+          <app-code-tabs [tsCode]="sourceCodes.starRating.ts" [htmlCode]="sourceCodes.starRating.html" [githubUrl]="sourceCodes.starRating.github">
+            <app-star-rating (ratingChange)="onRatingChange($event)" />
+          </app-code-tabs>
         </div>
 
         <!-- チップインプット -->
-        <div class="flex items-center justify-center">
-          <app-chip-input (chipsChange)="onChipsChange($event)" (chipAdded)="onChipAdded($event)" (chipRemoved)="onChipRemoved($event)" />
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">チップインプット</h3>
+          <app-code-tabs [tsCode]="sourceCodes.chipInput.ts" [htmlCode]="sourceCodes.chipInput.html" [githubUrl]="sourceCodes.chipInput.github">
+            <app-chip-input (chipsChange)="onChipsChange($event)" (chipAdded)="onChipAdded($event)" (chipRemoved)="onChipRemoved($event)" />
+          </app-code-tabs>
         </div>
       </div>
     </section>
